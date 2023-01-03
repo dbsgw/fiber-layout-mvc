@@ -10,12 +10,6 @@ func SetRoute(app *fiber.App) {
 	app.Get("/", func(ctx *fiber.Ctx) error {
 		return ctx.Render("index", fiber.Map{
 			"Title": "Hello, World!",
-		})
-	})
-
-	app.Get("/main", func(ctx *fiber.Ctx) error {
-		return ctx.Render("index", fiber.Map{
-			"Title": "Hello, World!",
 		}, "layouts/main")
 	})
 
